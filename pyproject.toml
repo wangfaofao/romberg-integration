@@ -14,7 +14,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"},
+    {name = "wangheng", email = "wangfaofao@gmail.com"},
 ]
 keywords = [
     "numerical-integration",
@@ -39,10 +39,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/romberg-integration"
-Documentation = "https://github.com/yourusername/romberg-integration/blob/main/README.md"
-Repository = "https://github.com/yourusername/romberg-integration.git"
-Issues = "https://github.com/yourusername/romberg-integration/issues"
+Homepage = "https://github.com/wangheng/romberg-integration"
+Documentation = "https://github.com/wangheng/romberg-integration/blob/main/README.md"
+Repository = "https://github.com/wangheng/romberg-integration.git"
+Issues = "https://github.com/wangheng/romberg-integration/issues"
 
 [project.optional-dependencies]
 dev = [
@@ -57,8 +57,10 @@ docs = [
     "sphinx-rtd-theme>=1.0.0",
 ]
 
-[tool.setuptools.ext-modules]
+[tool.setuptools]
 # Cython 扩展由 setup.py 处理
+# 只包含 RombergIntegration 模块，不包含测试文件
+py-modules = ["RombergIntegration"]
 
 [tool.black]
 line-length = 100

@@ -10,10 +10,7 @@ recursive-include . *.pyx
 recursive-include . *.pxd
 recursive-include . *.pxi
 
-# 包含测试文件
-recursive-include . *.py
-
-# 排除不需要的文件
+# 排除不需要的文件和目录
 global-exclude *.pyc
 global-exclude __pycache__
 global-exclude .DS_Store
@@ -24,3 +21,9 @@ global-exclude .venv
 global-exclude venv
 global-exclude build
 global-exclude dist
+
+# 排除开发相关的 MD 文件和文档
+exclude test_*.py
+exclude README.rst
+exclude CONTRIBUTING.md
+exclude CHANGELOG.md

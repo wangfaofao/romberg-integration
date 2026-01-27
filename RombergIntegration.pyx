@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+模块名称: RombergIntegration.pyx
+功能描述: Romberg 数值积分算法 Cython 实现
+
+本模块提供高精度的 Romberg 积分方法，支持递归和动态规划两种实现方式。
+采用外推加速技术逐步提高积分精度，可达到用户指定的精度要求。
+
+作者: wangheng <wangfaofao@gmail.com>
+版本: 1.0.0
+更新时间: 2026-01-27
+"""
+
 # cython: language_level=3, boundscheck=False, wraparound=True, cdivision=True
 from libc.math cimport pow as c_pow, fabs as c_fabs
 from cpython.pycapsule cimport PyCapsule_New, PyCapsule_GetPointer

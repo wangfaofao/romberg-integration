@@ -1,8 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
-test_romberg_compare.py - Cython 与 C++ 版本对标测试
+模块名称: test_romberg_compare.py
+功能描述: Cython 与 C++ 版本 Romberg 积分对标测试
 
-以 C++ 版本的测试结果为标准答案，对照 Cython 版本的实现。
-C++ 版本结果作为参考标准。
+本模块对比 Cython 版本与 C++ 版本的实现结果，验证两个版本的数值精度和算法正确性。
+以 C++ 版本的测试结果为标准答案，确保 Cython 版本的计算结果完全一致。
+
+作者: wangheng <wangfaofao@gmail.com>
+版本: 1.0.0
+更新时间: 2026-01-27
 """
 
 import math

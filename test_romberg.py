@@ -1,5 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
-test_romberg.py - Cython Romberg 积分算法的单元测试
+模块名称: test_romberg.py
+功能描述: Romberg 数值积分算法 Cython 版本单元测试
+
+本模块提供对 Romberg 积分算法的完整单元测试，验证递归方法和动态规划方法的正确性。
+测试覆盖常函数、线性、多项式、三角、指数、对数等多种函数类型。
+
+作者: wangheng <wangfaofao@gmail.com>
+版本: 1.0.0
+更新时间: 2026-01-27
 """
 
 import math
