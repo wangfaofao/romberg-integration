@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install cython build
+          pip install cython build setuptools
 
       - name: Build extension
         run: |
@@ -62,7 +62,7 @@ jobs:
       - name: Install build tools
         run: |
           python -m pip install --upgrade pip
-          pip install build cython
+          pip install build cython setuptools
 
       - name: Build distributions
         run: python -m build
@@ -90,7 +90,7 @@ jobs:
       - name: Install build tools
         run: |
           python -m pip install --upgrade pip
-          pip install build twine cython
+          pip install build twine cython setuptools
 
       - name: Build distributions
         run: python -m build
