@@ -1,0 +1,16 @@
+*.pyc
+__pycache__/
+*.so
+*.pyd
+*.egg-info/
+dist/
+build/
+.DS_Store
+.vscode/
+.idea/
+*.egg
+*.cython_inline/
+RombergIntegration.c
+RombergIntegration.cpp
+*.o
+*.a
