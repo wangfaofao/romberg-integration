@@ -12,7 +12,7 @@ version = "1.0.0"
 description = "High-performance Cython implementation of Romberg Integration algorithm"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 authors = [
     {name = "wangheng", email = "wangfaofao@gmail.com"},
 ]

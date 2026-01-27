@@ -15,7 +15,6 @@ ext_modules = [
         language="c++",
         extra_compile_args=[
             "-O3",  # 最大优化
-            "-march=native",  # 原生架构优化
             "-ffast-math",  # 快速数学运算
         ],
         extra_link_args=[],
