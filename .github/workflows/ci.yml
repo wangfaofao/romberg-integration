@@ -65,7 +65,7 @@ jobs:
           pip install build cython setuptools
 
       - name: Build distributions
-        run: python -m build
+        run: python -m build --sdist
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
