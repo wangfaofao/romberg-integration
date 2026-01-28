@@ -38,18 +38,9 @@ jobs:
           python test_romberg.py
 
   build:
-    name: Build wheel
+    name: Build source distribution
     needs: test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: ubuntu-latest
-            python-version: '3.13'
-          - os: macos-latest
-            python-version: '3.13'
-          - os: windows-latest
-            python-version: '3.13'
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +48,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.13'
 
       - name: Install build tools
         run: |
@@ -70,7 +61,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist-${{ matrix.os }}
+          name: dist
           path: dist/
 
   publish:
@@ -93,7 +84,7 @@ jobs:
           pip install build twine cython setuptools
 
       - name: Build distributions
-        run: python -m build
+        run: python -m build --sdist
 
       - name: Check distributions
         run: python -m twine check dist/*
